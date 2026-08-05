@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 700 100">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+
+    text {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 16px;
+      fill: #36BCF7;
+    }
+    rect { fill: #36BCF7; }
+
+    /* ===== печать / стирание (backspace) ===== */
+    .l1 { animation: clip1 13.2s linear infinite; }
+    .l2 { animation: clip2 13.2s linear infinite; }
+    .l3 { animation: clip3 13.2s linear infinite; }
+
+    /* "Hello, there!" — 13 символов */
+    @keyframes clip1 {
+      0%, 3.03%   { clip-path: inset(-10px 208px -10px 0); }
+      3.03%       { clip-path: inset(-10px 208px -10px 0); animation-timing-function: steps(13, end); }
+      11.89%      { clip-path: inset(-10px 0 -10px 0); }
+      20.98%      { clip-path: inset(-10px 0 -10px 0); animation-timing-function: steps(13, end); }
+      26.89%,100% { clip-path: inset(-10px 208px -10px 0); }
+    }
+    /* "My name is Ilnar" — 16 символов */
+    @keyframes clip2 {
+      0%, 29.92%  { clip-path: inset(-10px 256px -10px 0); }
+      29.92%      { clip-path: inset(-10px 256px -10px 0); animation-timing-function: steps(16, end); }
+      40.83%      { clip-path: inset(-10px 0 -10px 0); }
+      49.92%      { clip-path: inset(-10px 0 -10px 0); animation-timing-function: steps(16, end); }
+      57.20%,100% { clip-path: inset(-10px 256px -10px 0); }
+    }
+    /* "Nice to meet you!" — 17 символов */
+    @keyframes clip3 {
+      0%, 60.23%  { clip-path: inset(-10px 272px -10px 0); }
+      60.23%      { clip-path: inset(-10px 272px -10px 0); animation-timing-function: steps(17, end); }
+      71.82%      { clip-path: inset(-10px 0 -10px 0); }
+      88.48%      { clip-path: inset(-10px 0 -10px 0); animation-timing-function: steps(17, end); }
+      96.21%,100% { clip-path: inset(-10px 272px -10px 0); }
+    }
+
+    /* ===== курсор: движение ===== */
+    .c1 { animation: cur1 13.2s linear infinite; }
+    .c2 { animation: cur2 13.2s linear infinite; }
+    .c3 { animation: cur3 13.2s linear infinite; }
+
+    @keyframes cur1 {
+      0%, 3.03%   { transform: translateX(0); }
+      3.03%       { transform: translateX(0); animation-timing-function: steps(13, end); }
+      11.89%      { transform: translateX(208px); }
+      20.98%      { transform: translateX(208px); animation-timing-function: steps(13, end); }
+      26.89%,100% { transform: translateX(0); }
+    }
+    @keyframes cur2 {
+      0%, 29.92%  { transform: translateX(0); }
+      29.92%      { transform: translateX(0); animation-timing-function: steps(16, end); }
+      40.83%      { transform: translateX(256px); }
+      49.92%      { transform: translateX(256px); animation-timing-function: steps(16, end); }
+      57.20%,100% { transform: translateX(0); }
+    }
+    @keyframes cur3 {
+      0%, 60.23%  { transform: translateX(0); }
+      60.23%      { transform: translateX(0); animation-timing-function: steps(17, end); }
+      71.82%      { transform: translateX(272px); }
+      88.48%      { transform: translateX(272px); animation-timing-function: steps(17, end); }
+      96.21%,100% { transform: translateX(0); }
+    }
+
+    /* ===== курсор: видимость в своей фазе ===== */
+    .v1 { animation: vis1 13.2s linear infinite; }
+    .v2 { animation: vis2 13.2s linear infinite; }
+    .v3 { animation: vis3 13.2s linear infinite; }
+    @keyframes vis1 { 0%,3.03% {opacity:0} 3.04%,26.89% {opacity:1} 26.9%,100% {opacity:0} }
+    @keyframes vis2 { 0%,29.92%{opacity:0} 29.93%,57.2% {opacity:1} 57.21%,100%{opacity:0} }
+    @keyframes vis3 { 0%,60.23%{opacity:0} 60.24%,96.21%{opacity:1} 96.22%,100%{opacity:0} }
+
+    /* мигание курсора */
+    .blink { animation: blink 0.9s linear infinite; }
+    @keyframes blink { 0%,55% {opacity:1} 56%,100% {opacity:0} }
+  </style>
+
+  <!-- строки, строго по центру -->
+  <text class="l1" x="350" y="36" text-anchor="middle">Hello, there!</text>
+  <text class="l2" x="350" y="36" text-anchor="middle">My name is Ilnar</text>
+  <text class="l3" x="350" y="36" text-anchor="middle">Nice to meet you!</text>
+
+  <!-- блочный курсор -->
+  <g class="v1"><g class="blink"><rect class="c1" x="246" y="20" width="16" height="16"/></g></g>
+  <g class="v2"><g class="blink"><rect class="c2" x="222" y="20" width="16" height="16"/></g></g>
+  <g class="v3"><g class="blink"><rect class="c3" x="214" y="20" width="16" height="16"/></g></g>
+</svg>
