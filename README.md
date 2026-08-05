@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Typing SVG" src="./assets/typing.svg" align="center">
+  <img alt="Typing SVG" src="./assets/hello-typing.svg" align="center">
 </p>
 
 <img src="https://github.com/user-attachments/assets/cbbaf26a-9be4-48d1-9ad3-253db8e676fe" width='40' align="left"/><h2>Hey there! I'm Ilnar</h2>
