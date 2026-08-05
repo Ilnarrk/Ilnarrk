@@ -38,7 +38,6 @@
 ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)
 
 <br/>
-<br/>
 
 ### ⚙️ &nbsp;GitHub Analytics
 
