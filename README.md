@@ -8,6 +8,9 @@
 🌱 Currently diving deep into machine learning
 🔍 Passionate about building practical AI applications
 🧠 Always interested in learning about new AI solutions
+  
+   When I'm not training models, you'll find me exploring open-source projects, 
+   reading research papers, or experimenting with new tech
 </pre>
 
 <br/>
