@@ -1,8 +1,7 @@
 <img src="https://github.com/user-attachments/assets/cbbaf26a-9be4-48d1-9ad3-253db8e676fe" width='40' align="left"/><h2>Hey there! I'm Ilnar</h2>
 
-<img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c" align="right" />
-
 ### 👨🏻‍💻 &nbsp;About Me
+<img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c" align="right" />
 
 💡 &nbsp;AI Engineer focused on developing intelligent solutions and exploring emerging technologies.  
 🌱 &nbsp;Currently diving deep into machine learning, systems design, and scalable AI architectures.  
