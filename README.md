@@ -1,14 +1,17 @@
 <img src="https://github.com/user-attachments/assets/cbbaf26a-9be4-48d1-9ad3-253db8e676fe" width='40' align="left"/><h2>Hey there! I'm Ilnar</h2>
 
-### 👨🏻‍💻 &nbsp;About Me
 <img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c" align="right" />
 
+### 👨🏻‍💻 &nbsp;About Me
 
 💡 &nbsp;AI Engineer focused on developing intelligent solutions and exploring emerging technologies.  
 🌱 &nbsp;Currently diving deep into machine learning, systems design, and scalable AI architectures.  
 🔍 &nbsp;Passionate about building practical AI applications and experimenting with new frameworks.  
 🧠 &nbsp;Always interested in learning about new AI solutions and sharing technical insights!  
- 
+
+<br/>
+<br/>
+
 ![PyTorch](https://img.shields.io/badge/-PyTorch-05122A?style=flat&logo=pytorch&logoColor=EE4C2C)
 ![TensorFlow](https://img.shields.io/badge/-TensorFlow-05122A?style=flat&logo=tensorflow&logoColor=FF6F00)
 ![scikit-learn](https://img.shields.io/badge/-scikit--learn-05122A?style=flat&logo=scikit-learn&logoColor=F7931E)
@@ -35,6 +38,8 @@
 ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)
 ![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)
 
+<br/>
+<br/>
 
 ### ⚙️ &nbsp;GitHub Analytics
 
@@ -50,6 +55,3 @@
   <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=Ilnarrk&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/>
 </a>
 </p>
-
-
-
