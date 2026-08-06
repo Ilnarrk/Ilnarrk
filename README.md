@@ -75,7 +75,10 @@
 <br/>
 
 <p align="center">
-  <img alt="Typing SVG" src="./assets/snake.svg" align="center">
+  <img
+    alt="Typing SVG"
+    src="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/snake_v1.svg"
+  >
 </p>
 
 <br/>
