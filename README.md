@@ -75,10 +75,20 @@
 <br/>
 
 <p align="center">
-  <img
-    alt="Typing SVG"
-    src="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/snake_v1.svg"
-  >
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/snake_dark_v1.svg"
+    >
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/snake_v1.svg"
+    >
+    <img
+      alt="Typing SVG"
+      src="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/snake_v1.svg"
+    >
+  </picture>
 </p>
 
 <br/>
