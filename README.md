@@ -1,23 +1,31 @@
 <p align="center">
-  <img alt="Typing SVG" src="./assets/hello-typing.svg" align="center">
+  <img alt="Typing SVG" src="./assets/hello-typing.svg" />
 </p>
 
-<img src="https://github.com/user-attachments/assets/cbbaf26a-9be4-48d1-9ad3-253db8e676fe" width='40' align="left"/><h2>Hey there! I'm Ilnar</h2>
+<h2>
+  <img src="https://github.com/user-attachments/assets/cbbaf26a-9be4-48d1-9ad3-253db8e676fe" width="40" valign="middle"/>
+  Hey there! I'm Ilnar
+</h2>
 
-### 👨🏻‍💻 &nbsp;About Me
+### 👨🏻‍💻 About Me
 
-<pre>
-<img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c" align="right" />
-💡 AI Engineer focused on developing intelligent solutions
-🌱 Currently diving deep into machine learning
-🔍 Passionate about building practical AI applications
-🧠 Always interested in learning about new AI solutions
-  
-   When I'm not training models, you'll find me exploring open-source projects, 
-   reading research papers, or experimenting with new tech
-</pre>
-
-<br/>
+<table border="0">
+  <tr>
+    <td valign="middle">
+      💡 AI Engineer focused on developing intelligent solutions<br/>
+      🌱 Currently diving deep into machine learning & LLM architectures<br/>
+      🔍 Passionate about building practical AI applications and smart search systems<br/>
+      🧠 Always interested in exploring modern AI research and new tech stack<br/>
+      🛠️ Working on scalable end-to-end data pipelines and model integration<br/>
+      📈 Striving to bridge the gap between AI concepts and production-ready code<br/><br/>
+      When I'm not training models, you'll find me contributing to open-source projects, 
+      reading research papers, benchmarking hardware, or experimenting with new framework features.
+    </td>
+    <td valign="middle" align="center" width="300">
+      <img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c"/>
+    </td>
+  </tr>
+</table>
 <br/>
 
 ### 🛠️ &nbsp;Techs I Use
