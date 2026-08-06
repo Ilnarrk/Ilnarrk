@@ -1,14 +1,39 @@
 import random
 
-def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
+THEMES = {
+    "light": {
+        "bg": "#ffffff",
+        "border": "#1b1f230a",
+        "empty": "#ebedf0",
+        "levels": ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+        "snake": "purple",
+        "label": "#57606a",
+    },
+    "dark": {
+        "bg": "#0d1117",
+        "border": "#ffffff0d",
+        "empty": "#161b22",
+        "levels": ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+        "snake": "#a371f7",
+        "label": "#8b949e",
+    },
+}
+
+
+def generate_animated_snake_svg(weeks=52, theme="light", filename=None):
+    t = THEMES[theme]
+    if filename is None:
+        filename = f"github_snake_{theme}.svg"
+
     cols, rows = weeks, 7
     cell_size = 12
     cell_step = 16  # 12px ячейка + 4px отступ
 
-    margin_left = 40    # место под дни недели слева
-    margin_top = 28     # место под месяцы сверху
+    # Поля, чтобы надписи НЕ пересекались с сеткой коммитов
+    margin_left = 40
+    margin_top = 28
     margin_right = 10
-    margin_bottom = 38  # место под легенду Less/More снизу
+    margin_bottom = 38
 
     grid_width = cols * cell_step
     grid_height = rows * cell_step
@@ -16,20 +41,22 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
     total_width = margin_left + grid_width + margin_right
     total_height = margin_top + grid_height + margin_bottom
 
-    border_color = "#1b1f230a"
-    c_empty = "#ebedf0"
-    c_levels = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
-    snake_color = "purple"
+    bg_color = t["bg"]
+    border_color = t["border"]
+    c_empty = t["empty"]
+    c_levels = t["levels"]
+    snake_color = t["snake"]
+    label_color = t["label"]
 
+    # Надписи: месяцы строго с января по декабрь
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    days = {0: "Mon", 2: "Wed", 4: "Fri"}  # как на GitHub — через строку
+    days = {0: "Mon", 2: "Wed", 4: "Fri"}
 
-    # Атрибуты текста прямо в разметке (не зависят от <style>)
-    label_attrs = 'font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a"'
+    label_attrs = f'font-family="Helvetica, Arial, sans-serif" font-size="10" fill="{label_color}"'
 
     # 1. Генерация связного пути с ИНЕРЦИЕЙ
-    random.seed(42)
+    random.seed(42)  # одинаковый сид => одинаковая карта коммитов в обеих темах
     path_len = cols * rows
 
     current_x, current_y = 0, 0
@@ -81,7 +108,7 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
     svg.append(f'    .c {{ shape-rendering: geometricPrecision; fill: var(--ce); stroke-width: 1px; stroke: var(--cb); animation: none {anim_duration}ms linear infinite; width: {cell_size}px; height: {cell_size}px; rx: 2px; ry: 2px; }}')
     svg.append(f'    .s {{ shape-rendering: geometricPrecision; fill: var(--cs); animation: none {anim_duration}ms linear infinite; }}')
 
-    # 2. Кейфреймы змейки (координаты УЖЕ с учетом полей)
+    # 2. Кейфреймы змейки (координаты с учетом полей)
     for seg in snake_segments:
         s_id = seg["id"]
         delay_steps = seg["delay_steps"]
@@ -124,17 +151,20 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
 
     svg.append('  </style>')
 
-    # 4. Месяцы сверху: Jan..Dec, равномерно по 52 неделям
+    # Подложка темы
+    svg.append(f'  <rect x="0" y="0" width="{total_width}" height="{total_height}" rx="6" ry="6" fill="{bg_color}" />')
+
+    # 4. Месяцы сверху: Jan..Dec
     for i, name in enumerate(months):
         x = margin_left + round(i * cols / 12) * cell_step
         svg.append(f'  <text {label_attrs} x="{x}" y="{margin_top - 10}">{name}</text>')
 
-    # 5. Дни недели слева (строго в своей колонке, не заезжая на сетку)
+    # 5. Дни недели слева
     for r, name in days.items():
         y = margin_top + r * cell_step + 11
         svg.append(f'  <text {label_attrs} x="2" y="{y}">{name}</text>')
 
-    # 6. Клетки фона и коммитов (с полями)
+    # 6. Клетки фона и коммитов
     for w in range(cols):
         for d in range(rows):
             x = margin_left + w * cell_step + 2
@@ -147,7 +177,7 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
                 fill_attr = f' fill="{c_levels[level]}"' if level > 0 else ''
                 svg.append(f'  <rect class="c" x="{x}" y="{y}"{fill_attr} />')
 
-    # 7. Змейка (x/y = offset, т.к. поля уже добавлены в translate-кейфреймы)
+    # 7. Змейка
     for seg in snake_segments:
         s_id = seg["id"]
         size = seg["size"]
@@ -155,7 +185,7 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
         rx = seg["rx"]
         svg.append(f'  <rect class="s {s_id}" x="{offset}" y="{offset}" width="{size}" height="{size}" rx="{rx}" ry="{rx}" />')
 
-    # 8. Легенда Less / More внизу справа, квадратики тех же тонов, что и коммиты
+    # 8. Легенда Less / More (тона c_levels текущей темы)
     sq_size = 10
     sq_gap = 3
     sq_y = margin_top + grid_height + 14
@@ -163,7 +193,7 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
 
     right_edge = total_width - margin_right
     squares_width = 5 * sq_size + 4 * sq_gap
-    squares_start = right_edge - 30 - squares_width   # 30px под слово "More"
+    squares_start = right_edge - 30 - squares_width
     less_x = squares_start - 6
 
     svg.append(f'  <text {label_attrs} text-anchor="end" x="{less_x}" y="{text_y}">Less</text>')
@@ -179,4 +209,7 @@ def generate_animated_snake_svg(weeks=52, filename="snake.svg"):
 
     return filename
 
-generate_animated_snake_svg(weeks=52)
+
+# Генерируем оба файла
+generate_animated_snake_svg(weeks=52, theme="light")  # github_snake_light.svg
+generate_animated_snake_svg(weeks=52, theme="dark")   # github_snake_dark.svg
