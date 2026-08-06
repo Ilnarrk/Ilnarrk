@@ -22,7 +22,7 @@
       reading research papers, benchmarking hardware, or experimenting with new framework features.
     </td>
     <td valign="middle" align="center" width="300">
-      <img width="280" alt="coding" src="https://github.com/user-attachments/assets/956d90d7-1097-402d-87fa-9a74ba4f267c"/>
+      <img width="320" alt="coding" src="https://raw.githubusercontent.com/Ilnarrk/Ilnarrk/main/assets/coding.gif"/>
     </td>
   </tr>
 </table>
@@ -52,7 +52,6 @@
   <img src="https://img.shields.io/badge/-Pandas-05122A?style=flat&logo=pandas&logoColor=150458" />
   <img src="https://img.shields.io/badge/-NumPy-05122A?style=flat&logo=numpy&logoColor=013243" />
   <img src="https://img.shields.io/badge/-Jupyter-05122A?style=flat&logo=jupyter&logoColor=F37626" />
-  <img src="https://img.shields.io/badge/-RStudio-05122A?style=flat&logo=rstudio&logoColor=75AADB" />
   <img src="https://img.shields.io/badge/-CUDA-05122A?style=flat&logo=nvidia&logoColor=76B900" />
   <img src="https://img.shields.io/badge/-FastAPI-05122A?style=flat&logo=fastapi&logoColor=009688" />
   <img src="https://img.shields.io/badge/-Django-05122A?style=flat&logo=django&logoColor=092E20" />
@@ -66,7 +65,6 @@
   <img src="https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown" />
   <img src="https://img.shields.io/badge/-Redis-05122A?style=flat&logo=redis&logoColor=DC382D" />
   <img src="https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux&logoColor=FCC624" />
-  <img src="https://img.shields.io/badge/-Embedded%20C-05122A?style=flat&logo=c&logoColor=A8B9CC" />
   <img src="https://img.shields.io/badge/-VS%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC" />
 </p>
 
