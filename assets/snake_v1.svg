@@ -2177,21 +2177,22 @@
     }
     .cell-51-4 { fill: #9be9a8; animation-name: c-51-4; }
   </style>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="40" y="18">Jan</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="104" y="18">Feb</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="184" y="18">Mar</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="248" y="18">Apr</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="312" y="18">May</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="392" y="18">Jun</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="456" y="18">Jul</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="520" y="18">Aug</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="600" y="18">Sep</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="664" y="18">Oct</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="728" y="18">Nov</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="808" y="18">Dec</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="2" y="39">Mon</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="2" y="71">Wed</text>
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" x="2" y="103">Fri</text>
+  <rect x="0" y="0" width="882" height="178" rx="6" ry="6" fill="#ffffff" />
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="40" y="18">Jan</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="104" y="18">Feb</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="184" y="18">Mar</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="248" y="18">Apr</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="312" y="18">May</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="392" y="18">Jun</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="456" y="18">Jul</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="520" y="18">Aug</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="600" y="18">Sep</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="664" y="18">Oct</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="728" y="18">Nov</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="808" y="18">Dec</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="2" y="56">Mon</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="2" y="88">Wed</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" x="2" y="120">Fri</text>
   <rect class="c cell-0-0" x="42" y="30" />
   <rect class="c" x="42" y="46" />
   <rect class="c" x="42" y="62" fill="#9be9a8" />
@@ -2560,11 +2561,11 @@
   <rect class="s s1" x="1.8" y="1.8" width="12.3" height="12.3" rx="4.1" ry="4.1" />
   <rect class="s s2" x="2.6" y="2.6" width="10.8" height="10.8" rx="3.6" ry="3.6" />
   <rect class="s s3" x="3.0" y="3.0" width="9.9" height="9.9" rx="3.3" ry="3.3" />
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" text-anchor="end" x="774" y="163">Less</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" text-anchor="end" x="774" y="163">Less</text>
   <rect x="780" y="154" width="10" height="10" rx="2" ry="2" fill="#ebedf0" stroke="#1b1f230a" stroke-width="1" />
   <rect x="793" y="154" width="10" height="10" rx="2" ry="2" fill="#9be9a8" stroke="#1b1f230a" stroke-width="1" />
   <rect x="806" y="154" width="10" height="10" rx="2" ry="2" fill="#40c463" stroke="#1b1f230a" stroke-width="1" />
   <rect x="819" y="154" width="10" height="10" rx="2" ry="2" fill="#30a14e" stroke="#1b1f230a" stroke-width="1" />
   <rect x="832" y="154" width="10" height="10" rx="2" ry="2" fill="#216e39" stroke="#1b1f230a" stroke-width="1" />
-  <text font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#57606a" text-anchor="end" x="872" y="163">More</text>
+  <text font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#57606a" text-anchor="end" x="872" y="163">More</text>
 </svg>
