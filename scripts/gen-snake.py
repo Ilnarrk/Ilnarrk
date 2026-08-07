@@ -51,9 +51,12 @@ def generate_animated_snake_svg(weeks=52, theme="light", filename=None):
     # Надписи: месяцы строго с января по декабрь
     months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-    days = {0: "Mon", 2: "Wed", 4: "Fri"}
 
-    label_attrs = f'font-family="Helvetica, Arial, sans-serif" font-size="10" fill="{label_color}"'
+    # Неделя начинается с воскресенья:
+    # строка 0 (Вс) — пустая, 1 — Mon, 2 — пустая, 3 — Wed, 4 — пустая, 5 — Fri, 6 — пустая
+    days = {1: "Mon", 3: "Wed", 5: "Fri"}
+
+    label_attrs = f'font-family="Helvetica, Arial, sans-serif" font-size="11" fill="{label_color}"'
 
     # 1. Генерация связного пути с ИНЕРЦИЕЙ
     random.seed(42)  # одинаковый сид => одинаковая карта коммитов в обеих темах
@@ -159,9 +162,9 @@ def generate_animated_snake_svg(weeks=52, theme="light", filename=None):
         x = margin_left + round(i * cols / 12) * cell_step
         svg.append(f'  <text {label_attrs} x="{x}" y="{margin_top - 10}">{name}</text>')
 
-    # 5. Дни недели слева
+    # 5. Дни недели слева (строки 1, 3, 5 — неделя с воскресенья)
     for r, name in days.items():
-        y = margin_top + r * cell_step + 11
+        y = margin_top + r * cell_step + 12
         svg.append(f'  <text {label_attrs} x="2" y="{y}">{name}</text>')
 
     # 6. Клетки фона и коммитов
